@@ -127,11 +127,11 @@ class Provider {
       throw Error('Provider should be initialized before use.');
     }
     const multicall = this.getContract('TRY_EACH', block);
-    if (!multicall) {
-      console.warn(
-        'Multicall3 contract is not available on this network, using deployless version.',
-      );
-    }
+//     if (!multicall) {
+//       console.warn(
+//         'Multicall3 contract is not available on this network, using deployless version.',
+//       );
+//     }
     const provider = this.provider as BaseProvider;
     const failableCalls = calls.map((call, index) => {
       return {
